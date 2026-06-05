@@ -1,0 +1,7 @@
+** sch_path: /home/ttuser/voltage_divider/xschem/resistor_1k.sch
+**.subckt resistor_1k 1 2
+*.iopin 1
+*.iopin 2
+R1 net1 net2 1k m=1
+**.ends
+.end

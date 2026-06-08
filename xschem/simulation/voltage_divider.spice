@@ -1,0 +1,9 @@
+** sch_path: /home/ttuser/voltage_divider/xschem/voltage_divider.sch
+**.subckt voltage_divider Vdd Out Vss
+*.opin Out
+*.iopin Vdd
+*.iopin Vss
+R1 Out Vdd sky130_fd_pr__res_generic_po W=.33 L=10 m=1
+R2 Vss Out sky130_fd_pr__res_generic_po W=.33 L=10 m=1
+**.ends
+.end

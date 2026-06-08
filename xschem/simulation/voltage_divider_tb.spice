@@ -1,0 +1,62 @@
+** sch_path: /home/ttuser/voltage_divider/xschem/voltage_divider_tb.sch
+**.subckt voltage_divider_tb
+x1 VDD Out GND voltage_divider
+C1 Out GND 1p m=1
+V1 VDD GND pulse(0 3 0 1n 1n 1u 2u)
+x3 VDD Out2 GND voltage_divider_ext
+C2 Out2 GND 100p m=1
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /home/ttuser/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /home/ttuser/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /home/ttuser/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /home/ttuser/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /home/ttuser/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+
+
+.control
+tran 1n 80u
+plot VDD Out Out2
+save all
+.endc
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  voltage_divider.sym # of pins=3
+** sym_path: /home/ttuser/voltage_divider/xschem/voltage_divider.sym
+** sch_path: /home/ttuser/voltage_divider/xschem/voltage_divider.sch
+.subckt voltage_divider Vdd Out Vss
+*.opin Out
+*.iopin Vdd
+*.iopin Vss
+R1 Out Vdd sky130_fd_pr__res_generic_po W=.33 L=10 m=1
+R2 Vss Out sky130_fd_pr__res_generic_po W=.33 L=10 m=1
+.ends
+
+
+* expanding   symbol:  voltage_divider_ext.sym # of pins=3
+** sym_path: /home/ttuser/voltage_divider/xschem/voltage_divider.sym
+** sch_path: /home/ttuser/voltage_divider/xschem/voltage_divider.sch
+.subckt voltage_divider_ext Vdd Out Vss
+*.opin Out
+*.iopin Vdd
+*.iopin Vss
+R1 Out Vdd sky130_fd_pr__res_generic_po W=.33 L=10 m=1
+R2 Vss Out sky130_fd_pr__res_generic_po W=.33 L=10 m=1
+.ends
+
+.GLOBAL VDD
+.GLOBAL GND
+.end

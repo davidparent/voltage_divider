@@ -1,0 +1,11 @@
+* NGSPICE file created from voltage_divider.ext - technology: sky130A
+
+.subckt sky130_fd_pr__res_generic_po_UY5NN7 a_n33_1000# a_n33_n1430#
+R0 a_n33_1000# a_n33_n1430# sky130_fd_pr__res_generic_po w=0.33 l=10
+.ends
+
+.subckt voltage_divider Vdd Vss Out
+Xsky130_fd_pr__res_generic_po_UY5NN7_0 Out Vss sky130_fd_pr__res_generic_po_UY5NN7
+Xsky130_fd_pr__res_generic_po_UY5NN7_1 Vdd Out sky130_fd_pr__res_generic_po_UY5NN7
+.ends
+

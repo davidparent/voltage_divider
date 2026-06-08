@@ -1,0 +1,26 @@
+timestamp 1780879574
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_pr__res_generic_po_UY5NN7 sky130_fd_pr__res_generic_po_UY5NN7_0 1 0 2038 0 1 429
+use sky130_fd_pr__res_generic_po_UY5NN7 sky130_fd_pr__res_generic_po_UY5NN7_1 1 0 833 0 1 430
+port "Vss" 1 1951 -1057 2122 -944 m1
+port "Vdd" 0 749 1768 920 1881 m1
+port "Out" 2 1366 -1042 1479 1901 m1
+node "Vss" 0 118.966 1951 -1057 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19323 568 0 0 0 0 0 0 0 0 0 0
+node "Vdd" 0 117.226 749 1768 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19323 568 0 0 0 0 0 0 0 0 0 0
+node "Out" 5 2032.78 1366 -1042 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 473783 8612 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "Out" "Vdd" 10.0242
+cap "Vss" "Out" 8.26054
+cap "sky130_fd_pr__res_generic_po_UY5NN7_0/a_n33_n1430#" "sky130_fd_pr__res_generic_po_UY5NN7_1/a_n33_n1430#" 44.9099
+cap "sky130_fd_pr__res_generic_po_UY5NN7_1/a_n33_n1430#" "sky130_fd_pr__res_generic_po_UY5NN7_1/a_n33_1000#" 36.4352
+cap "sky130_fd_pr__res_generic_po_UY5NN7_0/a_n33_1000#" "sky130_fd_pr__res_generic_po_UY5NN7_1/a_n33_1000#" 7.2284
+merge "sky130_fd_pr__res_generic_po_UY5NN7_1/VSUBS" "sky130_fd_pr__res_generic_po_UY5NN7_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__res_generic_po_UY5NN7_0/VSUBS" "VSUBS"
+merge "sky130_fd_pr__res_generic_po_UY5NN7_1/a_n33_n1430#" "sky130_fd_pr__res_generic_po_UY5NN7_0/a_n33_1000#" -321.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6256 -456 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__res_generic_po_UY5NN7_0/a_n33_1000#" "Out"
+merge "sky130_fd_pr__res_generic_po_UY5NN7_1/a_n33_1000#" "Vdd" -109.447 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4048 -268 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__res_generic_po_UY5NN7_0/a_n33_n1430#" "Vss" -95.9267 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2438 -198 0 0 0 0 0 0 0 0 0 0
